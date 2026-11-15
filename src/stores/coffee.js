@@ -1,8 +1,14 @@
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useCoffeeStore = defineStore('coffee', () => {
-  const coffees = ref([])
+  const coffees = ref(JSON.parse(localStorage.getItem('coffees')) || [])
+
+  watch(
+    coffees,
+    (newValue) => {
+      localStorage.setItem('coffees', JSON.stringify(newValue))
+    },{ deep: true },)
 
   const coffeeCount = computed(() => coffees.value.length)
 
