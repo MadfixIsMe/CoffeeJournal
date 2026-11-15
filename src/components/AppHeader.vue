@@ -6,10 +6,11 @@ import { RouterLink } from 'vue-router'
   <header class="app-header">
     <div class="app-header__inner">
       <RouterLink to="/" class="app-header__logo">☕ Coffee Journal</RouterLink>
-        <nav class="app-header__nav">
-          <RouterLink to="/">Kolekcia</RouterLink>
-          <RouterLink to="/wishlist">Wishlist</RouterLink>
-          <RouterLink to="/add">+ Pridať kávu</RouterLink>
+      <nav class="app-header__nav">
+        <RouterLink to="/">Kolekcia</RouterLink>
+        <RouterLink to="/wishlist">Wishlist</RouterLink>
+        <RouterLink to="/stats">Štatistiky</RouterLink>
+        <RouterLink to="/add">+ Pridať kávu</RouterLink>
       </nav>
     </div>
   </header>
